@@ -1,4 +1,5 @@
-# UTN-TUP-2021-NodeJs en XUBUNTU y configurado Docker
+# Calculadora de salarios para desarrolladores
+# NodeJs | ExpressJs | Typescript | XUBUNTU y Docker configurado.
 
 ## Requerimientos iniciales
 
@@ -12,9 +13,9 @@
 
 1. Ir a la carpeta `server` con un `cd server` .
 
-2. Para instalar las dependencias y que el IDE detecte ejecutar un `yarn install` en caso que yarn no exista usar un `npm install` .
+2. Instalar las dependencias y que el IDE detecte ejecutar un `yarn install` o `npm install` .
 
-3. Luego construir la imagen con un `sudo docker build .` .
+3. Construir la imagen con un `sudo docker build .` .
 
 4. Ubicarnos en la carpeta del docker con un `cd ../docker` y ejecutamos un `sudo docker-compose up --build` .
 
