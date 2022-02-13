@@ -26,5 +26,3 @@
 ### Dependencias
 
 ver el archivo: `Dev-Salary-Calculator/server/package.json`
-=======
->>>>>>> 275e2ad431bfbb607dbb3802d5e05c32cb51729b
