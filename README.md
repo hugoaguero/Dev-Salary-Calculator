@@ -1,5 +1,5 @@
 # Calculadora de salarios para desarrolladores
-# NodeJs | ExpressJs | Typescript | XUBUNTU y Docker configurado.
+NodeJs | ExpressJs | Typescript | XUBUNTU y Docker configurado.
 
 ## Requerimientos iniciales
 
