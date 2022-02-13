@@ -25,4 +25,4 @@
 
 ### Dependencias
 
-ver el archivo: `Dev-Salary-Calculator/server/package.json`
+1. ver el archivo: `Dev-Salary-Calculator/server/package.json`
