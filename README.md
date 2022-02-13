@@ -21,7 +21,6 @@
 4. Ubicarnos en la carpeta del docker con un `cd ../docker` y ejecutamos un `sudo docker-compose up --build` .
 
 5. En caso de mostrar algun error ejecutar un `docker exec -it server sh` y ejecutar un `yarn install` .
-<<<<<<< HEAD
 
 ### Dependencias
 
