@@ -1,8 +1,7 @@
-import Rate from "../../domain/entities/rate.entity";
-import CreateRateCommand from "../commands/create.rate.command";
-import RateRepository from "../../infrastructure/repositories/rate.repository";
-import technologyRepository from "../../infrastructure/repositories/technology.repository";
-import rateRepository from "../../infrastructure/repositories/rate.repository";
+import Rate from "../../../domain/entities/rate.entity";
+import CreateRateCommand from "../../commands/rate/create.rate.command";
+import technologyRepository from "../../../infrastructure/repositories/technology.repository";
+import rateRepository from "../../../infrastructure/repositories/rate.repository";
 
 class CreateRateHandler {
     async execute(command: CreateRateCommand) {

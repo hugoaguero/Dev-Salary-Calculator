@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import CreateRateCommand from "../../../application/commands/create.rate.command";
-import createRateHandler from "../../../application/handlers/create.rate.handler";
+import CreateRateCommand from "../../../application/commands/rate/create.rate.command";
+import CreateRateHandler from "../../../application/handlers/rate/create.rate.handler";
 
 class CreateRateAction {
     async run(req: Request, res: Response){
@@ -18,22 +18,24 @@ class CreateRateAction {
             !command.getLanguage() ||
             !command.getCurrency()) {
             
-                return res.status(400).json({message: "Required fields"})
+                return res.status(400).json({
+                    message: "Required fields"
+                })
         }
 
 
-        try{
-            await createRateHandler.execute(command);
-        }catch(error){
+        try {
+            await CreateRateHandler.execute(command);
+        } catch(error) {
             console.error(error);
-            return res.status(404).json({message: error + " Esta Rate ya ha sido creado"});
+            return res.status(404).json({
+                message: `${error} | Existing rate`
+            });
         }
 
-
-
-        
-
-        return res.status(201).json({message: "Rate created"});
+        return res.status(201).json({
+            message: "Rate created"
+        });
     }
 }
 

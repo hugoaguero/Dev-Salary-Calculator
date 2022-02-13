@@ -1,5 +1,5 @@
-import rateRepository from "../../infrastructure/repositories/rate.repository";
-import { DeleteRateCommand } from "../commands/delete.rate.command";
+import rateRepository from "../../../infrastructure/repositories/rate.repository";
+import { DeleteRateCommand } from "../../commands/rate/delete.rate.command";
 
 class DeleteRateHandler {
     async execute(command: DeleteRateCommand) {

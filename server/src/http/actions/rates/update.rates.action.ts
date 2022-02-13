@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import UpdateRateCommand from "../../../application/commands/update.rate.command";
-import updateRateHandler from "../../../application/handlers/update.rate.handler";
+import UpdateRateCommand from "../../../application/commands/rate/update.rate.command";
+import UpdateRateHandler from "../../../application/handlers/rate/update.rate.handler";
 
 class UpdateRateAction {
     async run(req: Request, res: Response) {
@@ -15,7 +15,7 @@ class UpdateRateAction {
         );
 
         try {
-            await updateRateHandler.execute(command);
+            await UpdateRateHandler.execute(command);
         } catch(error) {
             console.info(error);
             return res.status(404).json({

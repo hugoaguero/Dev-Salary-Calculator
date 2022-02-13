@@ -1,6 +1,6 @@
-import Technology from "../../domain/entities/technology.entity"
-import LanguageEnum from "../../domain/enums/language.enum";
-import SeniorityEnum from "../../domain/enums/seniority.enum";
+import Technology from "../../../domain/entities/technology.entity"
+import LanguageEnum from "../../../domain/enums/language.enum";
+import SeniorityEnum from "../../../domain/enums/seniority.enum";
 
 
 class UpdateRateCommand {
@@ -12,7 +12,8 @@ class UpdateRateCommand {
   private gross_margin: string;
   private currency: string;
 
-  constructor(id: string,
+  constructor(
+    id: string,
     technology: Technology,
     seniority: SeniorityEnum,
     language: LanguageEnum,

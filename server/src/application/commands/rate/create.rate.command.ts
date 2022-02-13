@@ -1,8 +1,7 @@
-import LanguageEnum from "../../domain/enums/language.enum";
-import SeniorityEnum from "../../domain/enums/seniority.enum";
+import LanguageEnum from "../../../domain/enums/language.enum";
+import SeniorityEnum from "../../../domain/enums/seniority.enum";
 
 export class CreateRateCommand {
-
     private technologyId: string;
     private seniority: SeniorityEnum;
     private language: LanguageEnum;
@@ -10,7 +9,8 @@ export class CreateRateCommand {
     private gross_margin: string;
     private currency: string;
 
-    constructor(technologyId: string,
+    constructor(
+        technologyId: string,
         seniority: SeniorityEnum,
         language: LanguageEnum,
         average_salary: string,
