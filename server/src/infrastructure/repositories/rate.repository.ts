@@ -8,6 +8,7 @@ class RateRepository {
     constructor() {
         this.rates = [];
     }
+
     async findAll(): Promise<Rate[]> {
         return this.rates;
     }
@@ -28,20 +29,18 @@ class RateRepository {
 
     async findOneById(id: string): Promise<Rate | null> {
         const rate = this.rates.find(r => r.getId() === id);
-
         return (rate) ? rate : null;
     }
 
     async findOneBySeniority(seniority: SeniorityEnum): Promise<Rate | null> {
         const rate = this.rates.find(t => t.getSeniority() === seniority);
-
         return (rate) ? rate : null;
     }
+
     async findAllBy(technologyIds?: string[],
         seniority?: string,
         language?: string,
         currency?: string): Promise<Rate[]>{
-        
             let query = this.rates;
 
         if(technologyIds){
@@ -66,12 +65,12 @@ class RateRepository {
     async exists(technologyId: string, seniority: SeniorityEnum,
         LanguageEnum: LanguageEnum, currency: string ): Promise<boolean>{
 
-        return  this.rates.some(r => r.getSeniority() == seniority 
-        &&  r.getLanguage() == LanguageEnum
-        && r.getCurrency() == currency
-        && r.getTechnology().getId() == technologyId);
+        return  this.rates.some(r =>
+            r.getSeniority() == seniority &&
+            r.getLanguage() == LanguageEnum &&
+            r.getCurrency() == currency &&
+            r.getTechnology().getId() == technologyId);
     }
-
 }
 
 export default new RateRepository();

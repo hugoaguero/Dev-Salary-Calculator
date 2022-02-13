@@ -1,5 +1,5 @@
 import shortid from "shortid";
-import  Technology from "./technology.entity";
+import Technology from "./technology.entity";
 import SeniorityEnum from "../enums/seniority.enum";
 import LanguageEnum from "../enums/language.enum";
 
@@ -12,7 +12,8 @@ class Rate {
   private gross_margin: string;
   private currency: string;
 
-  constructor(technology: Technology,
+  constructor(
+    technology: Technology,
     seniority: SeniorityEnum,
     language: LanguageEnum,
     average_salary: string,
@@ -27,7 +28,6 @@ class Rate {
     this.gross_margin = gross_margin;
     this.currency = currency;
   }
-
 
   public getId(): string {
     return this.id;
@@ -57,16 +57,13 @@ class Rate {
     return this.currency;
   }
 
-
   public total(): string {
-    let result;
-    result = parseFloat(this.gross_margin) + parseFloat(this.average_salary);
+    const result: number = parseFloat(this.gross_margin) + parseFloat(this.average_salary);
     return result.toString();
   }
 
   public percentage(): string {
-    let result;
-    result = parseFloat(this.gross_margin) / parseFloat(this.total());
+    const result: number = parseFloat(this.gross_margin) / parseFloat(this.total());
     return result.toString();
   }
 }

@@ -10,8 +10,10 @@ class DeleteTechnologyAction {
 
         try {
             await DeleteTechnologyHandler.execute(command);
-        } catch (error) {
-            return res.status(404).json({message: error})
+        } catch(error) {
+            return res.status(404).json({
+                message: error
+            })
         }
 
         return res.status(204).send();

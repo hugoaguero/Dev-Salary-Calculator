@@ -11,9 +11,11 @@ class UpdateTechnologyAction {
 
         try {
             await updateTechnologyHandler.execute(command);
-        } catch (error) {
+        } catch(error) {
             console.info(error);
-            return res.status(404).json({message: error });
+            return res.status(404).json({
+                message: error
+            });
         }
 
         return res.status(200).json({message: "Technology updated"});
