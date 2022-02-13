@@ -1,7 +1,8 @@
 # Calculadora de salarios para desarrolladores
-NodeJs | ExpressJs | Typescript | XUBUNTU y Docker configurado.
 
-## Requerimientos iniciales
+## NodeJs | ExpressJs | Typescript | XUBUNTU y Docker configurado.
+
+### Requerimientos iniciales
 
 1. Instalar Virtual Box. `https://www.virtualbox.org/` .
 
@@ -9,7 +10,7 @@ NodeJs | ExpressJs | Typescript | XUBUNTU y Docker configurado.
 
 3. Instalar PostMan. `https://www.postman.com/` .
 
-### Pasos de instalación
+#### Pasos de instalación
 
 1. Ir a la carpeta `server` con un `cd server` .
 
